@@ -6,6 +6,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class NbpRequest {
@@ -22,7 +23,16 @@ public class NbpRequest {
     @ApiModelProperty(notes = "Rate for api", required = true, value = "rate", example = "4")
     private int rate;
     @ApiModelProperty(notes = "When api was called", required = true, value = "dateRequest", example = "2021-04-01")
-    private DateTimeFormat dateRequest;
+    private Timestamp dateRequest;
+
+
+    public NbpRequest(Date startDate, Date endDate, Gold gold, int rate) {
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.gold = gold;
+        this.rate = rate;
+    }
+
 
     public Long getId() {
         return id;
@@ -64,22 +74,8 @@ public class NbpRequest {
         this.rate = rate;
     }
 
-    public DateTimeFormat getDateRequest() {
-        return dateRequest;
-    }
-
-    public void setDateRequest(DateTimeFormat dateRequest) {
-        this.dateRequest = dateRequest;
-    }
 
 
 
 
-    public NbpRequest(Date startDate, Date endDate, Gold gold, int rate, DateTimeFormat dateRequest) {
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.gold = gold;
-        this.rate = rate;
-        this.dateRequest = dateRequest;
-    }
 }
