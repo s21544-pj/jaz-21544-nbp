@@ -1,14 +1,14 @@
 package pl.pjatk.jazs21544nbp.service;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import pl.pjatk.jazs21544nbp.NbpRepository;
+import pl.pjatk.jazs21544nbp.repository.NbpRepository;
 import pl.pjatk.jazs21544nbp.model.NbpRequest;
 
 
 @Service
 public class NbpService {
-    private final RestTemplate restTemplate;
-    private final NbpRepository nbpRepository;
+    private RestTemplate restTemplate;
+    private NbpRepository nbpRepository;
 
     public NbpService(RestTemplate restTemplate, NbpRepository nbpRepository) {
         this.restTemplate = restTemplate;

@@ -1,4 +1,4 @@
-package pl.pjatk.jazs21544nbp;
+package pl.pjatk.jazs21544nbp.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

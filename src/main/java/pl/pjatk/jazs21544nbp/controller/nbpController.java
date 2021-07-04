@@ -13,7 +13,6 @@ import pl.pjatk.jazs21544nbp.GlobalExceptionHandler;
 import pl.pjatk.jazs21544nbp.model.NbpRequest;
 import pl.pjatk.jazs21544nbp.service.NbpService;
 
-import java.util.Date;
 
 @RestController
 @RequestMapping("/nbp")
